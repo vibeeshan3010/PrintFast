@@ -68,7 +68,7 @@ nav ul.menu li a {
 
 nav ul.menu li a:hover {
     color: #ffffff;
-    background-color:  #0c99d6;
+    /* background-color:  #0c99d6; */
     /* padding: 10px 15px; */
     border-radius: 5px;
 }

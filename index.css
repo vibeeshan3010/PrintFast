@@ -258,42 +258,44 @@ ion-icon[name='close-outline'] {
     #0c99d6;
     align-items: center; /* Center items vertically */
 }
+.container_image{
+padding: 50px;
+}
 
 /* description mobile views */
 
 @media only screen and (max-width: 768px) {
     
     .description {
-        margin: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    
+    .container_image{
+        padding: 10px;
+        }
+        
+    
+  
+    
+}
+@media (max-width: 768px) {
+    .description {
         flex-direction: column;
+        align-items: center;
     }
 
-    .container_image {
-        /* margin-top: 20px; */
-        margin-right: 0; /* Remove right margin for mobile */
-    }
-
-    .div_image {
-        height: auto;
-        width: 100%; /* Set image width to 100% for mobile */
-    }
-
+   
     .text_container {
-        flex: none; /* Remove flex for text container */
+        text-align: center;
     }
 }
 
 
-.div_image{
-    height: 100px;
-    width:300px;
-    padding: 30px;
-}
-.container_image{
-    flex: 1;
-    width: 100%;
-    height: auto;
-}
+
+
 .service_section_outline{
     background-color: 
     #085a8d;
@@ -343,11 +345,38 @@ color: white;
 }
 
 .column2 {
-    flex: 2; 
-    width: 100%;
-    background-color:white;
-    padding: 10px;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; */
 }
+
+.card_column {
+    /* flex: 1 1 200px; Ensure that cards take at least 200px space */
+    /* display: flex; */
+    /* justify-content: center; */
+}
+
+.service_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+    .column2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card_column {
+        flex: 1 1 100%; /* Make each card take full width */
+    }
+}
+
 
 
 .text_container {
@@ -371,10 +400,11 @@ color: white;
 
 .product-card {
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #085a8d;
     border-radius: 5px;
     overflow: hidden;
     text-align: center;
+    border-radius: 20px;
     opacity: 1;
     transition: opacity 0.5s ease, max-height 0.5s ease;
 }
@@ -425,6 +455,13 @@ color: white;
 }
 
 @media (max-width: 768px) {
+    .column2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+   
+}
+@media (max-width: 768px) {
     .products {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
@@ -441,6 +478,13 @@ color: white;
 
 .container {
     padding: 16px;
+}
+
+
+.column2 {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
 }
 
 @media (max-width: 768px) {
@@ -519,8 +563,9 @@ color: white;
 
     
     .card_column {
-        display: flex;             /* Make it a flex container */
-        flex-direction: column;    /* Arrange children in a column */
+        align-content: center;
+        display: flex; 
+                 /* Make it a flex container */
         justify-content: center;   /* Center children vertically */
         align-items: center;       /* Center children horizontally */
         margin-bottom: 20px;       /* Space below the card */
@@ -531,18 +576,15 @@ color: white;
         display: flex;             /* Make the card a flex container */
         flex-direction: column;    /* Arrange children in a column */
         justify-content: center;   /* Center children vertically */
-        align-items: center;       /* Center children horizontally */
-        text-align: center;        /* Center text inside the card */
+        align-items: center;
+        margin-right: 20px;       /* Center children horizontally */
+        text-align: center; 
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 30px;       /* Center text inside the card */
     }
-    
     
 
-    .column2 {
-        width:50%;
-         /* Takes up two-thirds of the width */
-        background-color: #085a8d;
-        padding: 10px;
-    }
     
 }
 
@@ -579,11 +621,7 @@ color: white;
     padding: 0 10px;
     margin-right: 50px;
   }
-  .column2 {
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-  }
+  
 
   .card_column {
     /* flex-basis: calc(50% - 10px);  */
@@ -597,7 +635,7 @@ color: white;
     padding: 10px;
     margin-left: 10px;
     margin-top: 10px;
-
+    
     margin-right: 0px;
     font-size: larger;
     height: 250px;

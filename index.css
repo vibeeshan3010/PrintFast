@@ -304,6 +304,7 @@ ion-icon[name='close-outline'] {
 .service_section{
    background-color: white;
    display: flex flex-wrap;
+   align-items: center;
 }
 .header-container{
     display: flex;
@@ -518,9 +519,23 @@ color: white;
 
     
     .card_column {
-            flex:none;
-            margin-bottom: 20px; 
+        display: flex;             /* Make it a flex container */
+        flex-direction: column;    /* Arrange children in a column */
+        justify-content: center;   /* Center children vertically */
+        align-items: center;       /* Center children horizontally */
+        margin-bottom: 20px;       /* Space below the card */
+        text-align: center;        /* Center text inside the card */
     }
+    
+    .service_card {
+        display: flex;             /* Make the card a flex container */
+        flex-direction: column;    /* Arrange children in a column */
+        justify-content: center;   /* Center children vertically */
+        align-items: center;       /* Center children horizontally */
+        text-align: center;        /* Center text inside the card */
+    }
+    
+    
 
     .column2 {
         width:50%;

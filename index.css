@@ -11,11 +11,12 @@ a,a:hover{
     text-decoration: none;
 }
 .logo{
-    width: 100px;
+    width:280px;
+    height: auto;
     padding: 20px;
 }
 nav{
-  background-color: #f7f7f7;
+  background-color: whitesmoke;
   padding: 5px 20px;
   color:  #0c99d6;
   text-align: center;
@@ -116,7 +117,7 @@ ion-icon[name='close-outline'] {
         display: block;
         position: relative;
         height: 100%;
-        background-color: white;
+        background-color: whitesmoke;
         padding: 15px 20px;
 
     }
@@ -201,7 +202,6 @@ ion-icon[name='close-outline'] {
 
 /* mobile view .home_section */
 @media only screen and (max-width: 768px) {
-    
     .logo{
         display: flex;
         justify-content: space-between;

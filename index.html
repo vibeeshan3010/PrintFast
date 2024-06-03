@@ -20,20 +20,30 @@
    
   window.onload = function() {
     window.scrollTo(0, 0);
-  }
+  }  
+  $(function(){  
+            function toggleMenu() {
+                if ($(".menu").hasClass("active")) {
+                    $(".menu").removeClass("active");
+                    $(".toggle").find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+                } else {
+                    $(".menu").addClass("active");
+                    $(".toggle").find("a").html("<ion-icon name='close-outline'></ion-icon>");
+                }
+            }
+
+            $(".toggle").on("click", function(event){
+                event.preventDefault();
+                toggleMenu();
+            });
+
+            $(".nav-links").on("click", function(){
+                toggleMenu();
+            });
+        });
 
 
-    $(function(){
-     $(".toggle").on("click",function(){
-        if($(".menu").hasClass("active")){
-          $(".menu").removeClass("active");
-          $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
-        }else{
-            $(".menu").addClass("active");
-            $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
-        }
-     })
-    });
+
 
     function showMore() {
     var additionalProducts = document.querySelectorAll('.additional-products');
@@ -63,11 +73,11 @@ function showLess() {
             <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
         </div>
         <ul class="menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a class="nav-links" href="#home">Home</a></li>
+            <li><a class="nav-links" href="#services">Services</a></li>
+            <li><a class="nav-links" href="#products">Products</a></li>
+            <li><a class="nav-links" href="#about">About Us</a></li>
+            <li><a class="nav-links" href="#contact">Contact Us</a></li>
         </ul>
         <ul class="address">
         <p style="padding: 5px">13 Sangamitha Mw,</p>
@@ -343,7 +353,7 @@ function showLess() {
                         <div class="card_column">
                             <div class="service_card">
                                 <h3 class="service_card_header">DIGITAL PRINTING</h3>
-                                <img class="service_img" src="assets/digital_print.jpeg"/>
+                                <img class="service_img" src="assets/digital_printing.jpeg"/>
                             </div>
                         </div>
                     </div>

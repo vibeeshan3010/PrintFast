@@ -255,7 +255,7 @@ ion-icon[name='close-outline'] {
     display: flex;
     padding:50px;
     background-color: 
-    #0c99d6;
+    whitesmoke;
     align-items: center; /* Center items vertically */
 }
 .container_image{
@@ -380,7 +380,7 @@ color: white;
 
 
 .text_container {
-    color: white;
+    color: #085a8d;
     flex: 3;
 }
 

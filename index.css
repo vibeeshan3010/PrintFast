@@ -304,22 +304,108 @@ width: 100%;
     padding-left: 10px;
     
 }
-.description {
+.container {
     display: flex;
-    padding:50px;
-    background-color: 
-    whitesmoke;
-    align-items: center; /* Center items vertically */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.container_image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.div_image {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+.text_container {
+    flex: 1;
+    color: white;
+    min-width: 300px;
+}
+.featured_services_text{
+    color: white;
+    line-height: 2;
+}
+.text_container p {
+    line-height: 2;
+    color: white;
+    margin: 0;
 }
 .container_image{
 padding: 50px;
 }
 
+.featured_services{
+    background-color: #0c99d6;
+}
+
+.contact-container {
+      background-color: whitesmoke;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+    }
+    
+    p {
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 18px;
+      border: 1px solid #085a8d;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: white;
+      color: black;
+    }
+    
+    textarea {
+      height: 150px;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 12px 20px;
+      margin: 10px 0;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    .contact-info {
+      margin-bottom: 30px;
+    }
+    
+    .contact-info p {
+      margin: 5px 0;
+    }
+    
 /* description mobile views */
 
 @media only screen and (max-width: 768px) {
     
-    .description {
+    .featured_services {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -334,9 +420,12 @@ padding: 50px;
   
     
 }
+
 @media (max-width: 768px) {
-    .description {
+    .featured_services {
+        background-color: #0c99d6;
         flex-direction: column;
+        color: white;
         align-items: center;
     }
 
@@ -467,9 +556,12 @@ color: white;
     height: 300px;
 }
 
-.container {
+
+.products_container{
+    text-align: center;
     padding: 16px;
 }
+
 
 .show-more-container {
     grid-column: span 4; /* Adjust the span to match the layout */

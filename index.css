@@ -358,10 +358,21 @@ padding: 50px;
     p {
       margin-bottom: 10px;
     }
-    
+    .image_input{
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        font-size: 18px;
+        border: 1px solid #085a8d;
+        border-radius: 5px;
+        box-sizing: border-box;
+        background-color: white;
+        color: black;
+    }
     input[type="text"],
     input[type="email"],
     input[type="tel"],
+    
     textarea {
       width: 100%;
       padding: 12px;

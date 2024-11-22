@@ -437,15 +437,19 @@ function showLess() {
            <p>Hotline: +94 773 102 102</p>
          </div> -->
     
-         <form action="https://formsubmit.co/printpagelk@gmail.com" enctype="multipart/form-data" method="Post" >
-           <input style="color:black;font-size: 18px;" type="text" name="name" placeholder="Your Name" required>
-           <input style="color:black;font-size: 18px;" type="email" name="email" placeholder="Your Email" required>
-           <input style="color:black;font-size: 18px;"type="tel" name="phone" placeholder="Your Phone" required>
-           <input type="file" name="attachment" accept="image/png, image/jpeg,image/jpg" class="image_input">
-           <textarea name="message" placeholder="Your Message" required></textarea>
-           <input type="hidden" name="_captcha" value="false">
-           <button type="submit">Send Message</button>
-         </form>
+         <form action="https://formsubmit.co/printpagelk@gmail.com" id="contactForm" enctype="multipart/form-data" method="POST">
+            <input style="color:black;font-size: 18px;" type="text" name="name" placeholder="Your Name" required>
+            <input style="color:black;font-size: 18px;" type="email" name="email" placeholder="Your Email" required>
+            <input style="color:black;font-size: 18px;" type="tel" name="phone" placeholder="Your Phone" required>
+            <input type="file" name="attachment" accept="image/png, image/jpeg, image/jpg" class="image_input">
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <p id="statusMessage" style="color: green; font-size: 16px; font-weight: bold;"></p>
+            <button type="submit">Send Message</button>
+          </form>
+          
+        
+          
         </div>
     <div id="contact" class="contact">
         <h1>PrintPage</h1>
@@ -470,6 +474,33 @@ function showLess() {
              </div>
         
     </main>
-    <script src="index.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+          event.preventDefault(); // Stop default redirection
+      
+          const form = event.target;
+          const formData = new FormData(form);
+      
+          fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: {
+              Accept: 'application/json', // Specify JSON response
+            },
+          })
+            .then((response) => {
+              if (response.ok) {
+                document.getElementById('statusMessage').innerText = 'Your request has been sent successfully!';
+                form.reset(); // Clear the form fields
+              } else {
+                document.getElementById('statusMessage').innerText = 'Failed to send the request. Please try again.';
+              }
+            })
+            .catch((error) => {
+              document.getElementById('statusMessage').innerText = 'An error occurred. Please try again later.';
+              console.error('Error:', error);
+            });
+        });
+      </script>
 </body>
 </html>
